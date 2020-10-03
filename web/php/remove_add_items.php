@@ -17,6 +17,7 @@ return $data;
 
 if($_itemid)
 {
+
     if($_SESSION['cart'][$_itemid]){
         $substrac_price = $_SESSION['cart'][$_itemid]['price'];
         $_SESSION['cart_total'] -= (float)$substrac_price;
