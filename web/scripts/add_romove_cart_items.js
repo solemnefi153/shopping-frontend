@@ -12,12 +12,16 @@ function updateCartImage (num_of_items){
  }
 
  
- export function addOrRemoveFromTheSessionCart(query){
+ export function addOrRemoveFromTheSessionCart(query, callBackFunction = null){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var numb_of_items_in_cart = this.response;
         updateCartImage(numb_of_items_in_cart);
+        if(callBackFunction)
+        {
+         callBackFunction();
+        }
       }
     }
     xhttp.open("GET", "../php/remove_add_items.php?" + query, true);

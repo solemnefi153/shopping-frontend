@@ -1,10 +1,27 @@
 import {addOrRemoveFromTheSessionCart} from './add_romove_cart_items.js';
 
+//This prevents users for clicking multiple times in the same remove button. 
+var unRegisterAllEventListeners = (element) => {
+	if ( typeof element._eventListeners == 'undefined' || element._eventListeners.length == 0 ) {
+		return;	
+  }
+  //store how many listeners
+  var len = element._eventListeners.length;
+	for(var i = 0; i < len; ++i) {
+    //grab one listener object from the element
+    var listener = element._eventListeners[i];
+    //remove the event tistener 
+		element.removeEventListener(listener.event, listener.callback);
+  }
+	obj._eventListeners = [];
+}
+
+
 var removeItems = button_clicked => {
+    unRegisterAllEventListeners(button_clicked);
     var button_id = button_clicked.id;
     var query = "itemID=" + button_id;
-    addOrRemoveFromTheSessionCart(query);
-    reloadItemsInCart();
+    addOrRemoveFromTheSessionCart(query, reloadItemsInCart);
 }
 
 var reloadItemsInCart = () => {
