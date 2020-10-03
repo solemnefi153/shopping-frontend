@@ -1,0 +1,50 @@
+{ 
+    "00001": 
+    {
+        "name" : "Blender",
+        "price": "35.00",
+        "category": "kitchen",
+        "image_address": "../images/blender.jpg",
+        "id": "00001"
+    },
+    "00002":
+    {
+        "name" : "Glasses",
+        "price": "15.55",
+        "category": "kitchen",
+        "image_address": "../images/glasses.jpg", 
+        "id": "00002"
+    },
+    "00003":
+    {
+        "name" : "Pans",
+        "price": "200.00",
+        "category": "kitchen",
+        "image_address": "../images/pans.jpg",
+        "id": "00003"
+    },
+    "00004":
+    {
+        "name" : "Plates",
+        "price": "10.99",
+        "category": "kitchen",
+        "image_address": "../images/plates.jpg",
+        "id": "00004"
+    },
+    "00005":
+    {
+        "name" : "Silverware",
+        "price": "40.10",
+        "category": "kitchen",
+        "image_address": "../images/silverware.jpg", 
+        "id": "00005"
+    },
+    "00006":
+    {
+        "name" : "Tables",
+        "price": "5.99",
+        "category": "kitchen",
+        "image_address": "../images/tables.jpg", 
+        "id": "00006"
+    }
+}

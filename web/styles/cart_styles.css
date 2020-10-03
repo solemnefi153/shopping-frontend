@@ -1,0 +1,14 @@
+.products_on_cart{
+    font-family: 'Balsamiq Sans', cursive;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.remove_icon{
+    height: 1rem;
+    width: 1rem;
+}
+

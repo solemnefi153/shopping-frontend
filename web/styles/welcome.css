@@ -1,0 +1,15 @@
+.welcome{
+    display:flex;
+    flex-direction: column;
+    height: 45.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.welcome_message{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 4rem;
+}
+
+
+

@@ -1,0 +1,49 @@
+/* Nav bar styles*/
+#logo {
+   grid-area: logo;
+   height: 3rem;
+   width: 15rem;
+   padding-left: .5rem;
+   justify-self: start;
+   align-self: center;
+}
+
+#nav_links{
+   grid-area: links;
+   justify-self: center;
+   align-self: center;
+}
+
+#nav_links a{
+    padding: .90rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: gray;
+}
+
+.shopping_cart{
+   grid-area: cart;
+   justify-self: start;
+   align-self: center;
+   padding-right: .9rem;
+   padding-left: .5rem;
+}
+
+.shopping_cart img{
+    height: 3.5rem;
+    width: 3.2rem;
+}
+
+.nav_bar{
+    display:grid;
+    grid-template-columns: 20% auto 220px 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "logo . links cart";
+    background-color: #fbbfca;
+}
+
+.nav_item:hover{
+    background-color: #FBA6B5;
+}
+
+

@@ -1,0 +1,62 @@
+.purchase_details{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.products_on_cart{
+    margin: 1rem;
+    text-align: center;
+}
+
+.payment_form{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+
+}
+
+.payment_infomratin{
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.label{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+input{
+    font-size: 1rem;
+}
+
+.make_payment_btn{
+    background-color: #FBA6B5; 
+    border: solid;
+    border-color: #FBA6B5;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    margin: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.required{
+    color:red;
+}
+
+.error_message{
+    height: .8rem;
+    color:red;
+}
+
+.total{
+    margin-top: 1.5rem;
+}
+

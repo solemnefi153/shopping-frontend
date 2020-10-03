@@ -1,0 +1,21 @@
+.item_image{
+    height: 6rem;
+    width: 4rem;
+}
+
+.item_on_cart{
+    display: flex;
+    flex-direction: row;
+    width: 15rem;
+    justify-content: space-around;
+    align-items: center;
+    margin: .5rem auto;
+    padding-left: .5rem;
+    padding-right: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#total{
+    font-size: 2rem;
+}
