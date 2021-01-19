@@ -19,16 +19,16 @@ var error_map = {0:false, 1:false, 2:false, 3:false};
 
 var  createFormListeners = () => {
     street.addEventListener("input", () => {
-        verifyInput(street, street_error, 0, "Invalid Address", 2)
+        verifyInput(street, street_error, 0, "Invalid Address", 1)
     });
     suite.addEventListener("input", () => {
         verifyInput(suite, suite_error, 1, "Invalid suite or apartment number", 2)
     });
     state.addEventListener("input", () => {
-        verifyInput(state, state_error, 2, "Invalid State", 1)
+        verifyInput(state, state_error, 2, "Invalid State", 3)
     });
     zipcode.addEventListener("input", () => {
-        verifyInput(zipcode, zipcode_error, 3, "Invalid zipcode", 2)
+        verifyInput(zipcode, zipcode_error, 3, "Invalid zipcode", 4)
     });
 
     payment_form.addEventListener("submit", event => {
@@ -42,24 +42,37 @@ var  createFormListeners = () => {
 var verifyInput = (input_el, error_el , index, error_message, pattern) => {
     var pattern_regex;
     var input_text = input_el.value;
-    if(pattern == 1)
-        {
+    switch (pattern){
+        case 1:
+            //For addresses 
+            pattern_regex = /^[.0-9a-zA-Z\s,- ]+$/;
+            break;
+        case 2:
+            //For appartment
+            pattern_regex = /^[#0-9a-zA-Z- ]+$/;
+            break;  
+        case 3:
+            //State
+            pattern_regex = /^[a-zA-Z]+$/;
+            break; 
+        case 4:
+            //Zip
+            pattern_regex = /^[0-9a-zA-Z]+$/;
+            break;
+        default:
             pattern_regex = /^[a-zA-Z ]+$/;
-        }
-        else{
-            pattern_regex = /^[0-9a-zA-Z ]+$/;
-        }
-
-        if (pattern_regex.test(input_text)  || input_text == "") {
-            error_el.innerHTML = '';
-            error_map[index] = false;
-        }
-        else
-        {
-
-            error_el.innerHTML = error_message;
-            error_map[index] = true;
-        }
+            break;      
+    }
+  
+    if (pattern_regex.test(input_text)  || input_text == "") {
+        error_el.innerHTML = '';
+        error_map[index] = false;
+    }
+    else
+    {
+        error_el.innerHTML = error_message;
+        error_map[index] = true;
+    }
 }
 
 var checkForNoErrors = () => {
